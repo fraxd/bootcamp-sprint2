@@ -1,0 +1,15 @@
+/** INDEX.HTML */
+.jumbotron {
+    background-image: url("../IMG/jumbotron-landing.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/**  LOGIN PROFESIONALES **/
+
+.bg-profesional{
+    background-image: url("../IMG/bg-profesionales-login.jpeg");
+    background-size: cover;
+    background-position: center;
+}
