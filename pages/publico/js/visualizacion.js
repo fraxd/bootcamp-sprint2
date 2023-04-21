@@ -1,5 +1,5 @@
 document.getElementById('ingresoForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevenir el envío del formulario
+    event.preventDefault();
 
     // Obtener los valores de los campos de formulario
     var nombrePaciente = document.getElementById('nombrePaciente').value;
@@ -10,7 +10,7 @@ document.getElementById('ingresoForm').addEventListener('submit', function (even
 
     // Crear una nueva fila en la tabla con los datos ingresados
     var fila = document.createElement('tr');
-    fila.innerHTML = '<td>' +nombrePaciente + '</td><td>' + diagnostico + '</td><td>' + fecha + '</td><td>' + tratamiento + '</td><td>' + otrosDatos + '</td>';
+    fila.innerHTML = '<td>' + nombrePaciente + '</td><td>' + diagnostico + '</td><td>' + fecha + '</td><td>' + tratamiento + '</td><td>' + otrosDatos + '</td>';
 
     // Agregar la fila a la tabla
     document.getElementById('tablaDatos').getElementsByTagName('tbody')[0].appendChild(fila);
