@@ -41,7 +41,11 @@
     <main>
 
         <div class="container">
-            <table id="example" class="display" style="width:100%">
+            <div class="mb-2">
+                <button type="button " class="btn btn-light"><a data-bs-toggle="modal" data-bs-target="#modalNewExamen"
+                        class="text-decoration-none">Registrar Nuevo Examen </a></button>
+            </div>
+            <table id="tabla_examen" class="display" style="width:100%">
                 <thead>
                     <tr>
                         <th>Paciente</th>
@@ -58,7 +62,7 @@
                         <td>Dr. House</td>
                         <td>Hemograma</td>
                         <td>19/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Hemograma" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -67,7 +71,8 @@
                                     </path>
                                 </svg>
                             </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-download" viewBox="0 0 16 16">
                                     <path
                                         d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
@@ -83,7 +88,7 @@
                         <td>Dr. Milagro</td>
                         <td>Perfil Lipidico</td>
                         <td>10/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Lipidico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -104,64 +109,13 @@
                                 </svg>
                             </a></td>
                     </tr>
-                    <tr>
-                        <td>Kylan Dawson</td>
-                        <td>Dr. Simi</td>
-                        <td>Colesterol Total</td>
-                        <td>01/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Daniel Wynn</td>
-                        <td>Dra. Ana Maria Polo</td>
-                        <td>Trigliceridos</td>
-                        <td>05/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
+
                     <tr>
                         <td>David Forbes</td>
                         <td>Dr. ugarte</td>
                         <td>Orina</td>
                         <td>10/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_orina" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -185,9 +139,9 @@
                     <tr>
                         <td>Amena Dodson</td>
                         <td>Dr. Strange</td>
-                        <td>Perfil BioQuimico</td>
+                        <td>Perfil Bioquimico</td>
                         <td>12/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modalBioquimico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -239,7 +193,7 @@
                         <td>Dr. Milagro</td>
                         <td>Hemograma</td>
                         <td>16/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Hemograma" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -265,59 +219,7 @@
                         <td>Dr. Simi</td>
                         <td>Perfil Lipidico</td>
                         <td>18/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Jackson Baxter</td>
-                        <td>Dra. Ana Maria Polo</td>
-                        <td>Colesterol Total</td>
-                        <td>13/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Len Brown</td>
-                        <td>Dr. ugarte</td>
-                        <td>Trigliceridos</td>
-                        <td>15/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Lipidico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -343,7 +245,7 @@
                         <td>Dr. Strange</td>
                         <td>Orina</td>
                         <td>05/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_orina" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -367,9 +269,9 @@
                     <tr>
                         <td>Lydia Miranda</td>
                         <td>Dr. House</td>
-                        <td>Perfil BioQuimico</td>
+                        <td>Perfil Bioquimico</td>
                         <td>04/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modalBioquimico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -421,7 +323,7 @@
                         <td>Dr. Simi</td>
                         <td>Hemograma</td>
                         <td>15/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Hemograma" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -447,59 +349,7 @@
                         <td>Dra. Ana Maria Polo</td>
                         <td>Perfil Lipidico</td>
                         <td>17/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Cally Berry</td>
-                        <td>Dr. ugarte</td>
-                        <td>Colesterol Total</td>
-                        <td>08/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Suki Jarvis</td>
-                        <td>Dr. Strange</td>
-                        <td>Trigliceridos</td>
-                        <td>03/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Lipidico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -525,7 +375,7 @@
                         <td>Dr. House</td>
                         <td>Orina</td>
                         <td>11/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_orina" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -549,9 +399,9 @@
                     <tr>
                         <td>Kelsie Wyatt</td>
                         <td>Dr. Milagro</td>
-                        <td>Perfil BioQuimico</td>
+                        <td>Perfil Bioquimico</td>
                         <td>13/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modalBioquimico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -603,7 +453,7 @@
                         <td>Dra. Ana Maria Polo</td>
                         <td>Hemograma</td>
                         <td>15/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Hemograma" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -629,59 +479,7 @@
                         <td>Dr. ugarte</td>
                         <td>Perfil Lipidico</td>
                         <td>13/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Dacey Raymond</td>
-                        <td>Dr. Strange</td>
-                        <td>Colesterol Total</td>
-                        <td>05/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Kessie Frazier</td>
-                        <td>Dr. House</td>
-                        <td>Trigliceridos</td>
-                        <td>10/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Lipidico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -707,7 +505,7 @@
                         <td>Dr. Milagro</td>
                         <td>Orina</td>
                         <td>07/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_orina" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -731,9 +529,9 @@
                     <tr>
                         <td>Jerry Hickman</td>
                         <td>Dr. Simi</td>
-                        <td>Perfil BioQuimico</td>
+                        <td>Perfil Bioquimico</td>
                         <td>11/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modalBioquimico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -785,7 +583,7 @@
                         <td>Dr. ugarte</td>
                         <td>Hemograma</td>
                         <td>10/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Hemograma" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -811,59 +609,7 @@
                         <td>Dr. Strange</td>
                         <td>Perfil Lipidico</td>
                         <td>16/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Alfonso Maxwell</td>
-                        <td>Dr. House</td>
-                        <td>Colesterol Total</td>
-                        <td>06/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Jeremy Rodriquez</td>
-                        <td>Dr. Milagro</td>
-                        <td>Trigliceridos</td>
-                        <td>12/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Lipidico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -889,7 +635,7 @@
                         <td>Dr. Simi</td>
                         <td>Orina</td>
                         <td>04/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_orina" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -913,9 +659,9 @@
                     <tr>
                         <td>Nicholas Prince</td>
                         <td>Dra. Ana Maria Polo</td>
-                        <td>Perfil BioQuimico</td>
+                        <td>Perfil Bioquimico</td>
                         <td>13/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modalBioquimico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -967,7 +713,7 @@
                         <td>Dr. Strange</td>
                         <td>Hemograma</td>
                         <td>17/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Hemograma" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -993,59 +739,7 @@
                         <td>Dr. House</td>
                         <td>Perfil Lipidico</td>
                         <td>01/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Noelle Cochran</td>
-                        <td>Dr. Milagro</td>
-                        <td>Colesterol Total</td>
-                        <td>11/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Byron Frank</td>
-                        <td>Dr. Simi</td>
-                        <td>Trigliceridos</td>
-                        <td>16/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Lipidico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -1071,7 +765,7 @@
                         <td>Dra. Ana Maria Polo</td>
                         <td>Orina</td>
                         <td>12/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_orina" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -1095,9 +789,9 @@
                     <tr>
                         <td>Kirestin Jackson</td>
                         <td>Dr. ugarte</td>
-                        <td>Perfil BioQuimico</td>
+                        <td>Perfil Bioquimico</td>
                         <td>18/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modalBioquimico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -1149,7 +843,7 @@
                         <td>Dr. House</td>
                         <td>Hemograma</td>
                         <td>10/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Hemograma" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -1175,59 +869,7 @@
                         <td>Dr. Milagro</td>
                         <td>Perfil Lipidico</td>
                         <td>18/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Yuli Santos</td>
-                        <td>Dr. Simi</td>
-                        <td>Colesterol Total</td>
-                        <td>19/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                        <td><a href="../../assets/sample.pdf" target="_blank" class="text-decoration-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
-                                    </path>
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
-                                    </path>
-                                </svg>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Courtney Burton</td>
-                        <td>Dra. Ana Maria Polo</td>
-                        <td>Trigliceridos</td>
-                        <td>16/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Lipidico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -1253,7 +895,7 @@
                         <td>Dr. ugarte</td>
                         <td>Orina</td>
                         <td>08/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_orina" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -1277,9 +919,9 @@
                     <tr>
                         <td>Grant Fulton</td>
                         <td>Dr. Strange</td>
-                        <td>Perfil BioQuimico</td>
+                        <td>Perfil Bioquimico</td>
                         <td>15/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modalBioquimico" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -1331,7 +973,7 @@
                         <td>Dr. Milagro</td>
                         <td>Hemograma</td>
                         <td>07/04/2023</td>
-                        <td><a data-bs-toggle="modal" data-bs-target="#labResultModal" class="text-decoration-none">
+                        <td><a data-bs-toggle="modal" data-bs-target="#modal_Hemograma" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -1366,17 +1008,17 @@
         </div>
 
 
-        <!-- MODAL ver examenes-->
-        <div class="modal fade" id="labResultModal" tabindex="-1" aria-labelledby="labResultModalLabel"
+        <!-- Modal Coagulacion --------------------------->
+        <div class="modal fade" id="modal_Coagulacion" tabindex="-1" aria-labelledby="modal_Coagulacion_label"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Historico Examenes</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Coagulacion</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <canvas id="examnsChart"></canvas>
+                        <canvas id="chart_coagulacion"></canvas>
 
                     </div>
                     <div class="modal-footer">
@@ -1385,17 +1027,204 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="modal_Coagulacion" tabindex="-1" aria-labelledby="modal_Coagulacion_label"
+
+        <!-- Modal  LIPIDICO -------------------->
+        <div class="modal fade" id="modal_Lipidico" tabindex="-1" aria-labelledby="modal_Lipidico_label"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Historico Examenes</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Perfil Lipidico</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <canvas id="chart_coagulacion"></canvas>
+                        <canvas id="chart_Lipidico"></canvas>
 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal ORINA ----------------------- -->
+        <div class="modal fade" id="modal_orina" tabindex="-1" aria-labelledby="modal_orina_label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Orina Completa</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <canvas id="chart_Orina"></canvas>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal Hemograma ----------------------- -->
+        <div class="modal fade" id="modal_Hemograma" tabindex="-1" aria-labelledby="modal_Hemograma_label"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Hemograma</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table_Hemograma display" id="table_Hemograma" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Parámetro</th>
+                                    <th>Resultado</th>
+                                    <th>Valores de referencia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Glóbulos Rojos</td>
+                                    <td id="glr">-</td>
+                                    <td>4.5 - 5.5 millones/mm³</td>
+                                </tr>
+                                <tr>
+                                    <td>Hemoglobina</td>
+                                    <td id="hb">-</td>
+                                    <td>13 - 17 g/dL (hombres) / 12 - 15 g/dL (mujeres)</td>
+                                </tr>
+                                <tr>
+                                    <td>Hematocrito</td>
+                                    <td id="hto">-</td>
+                                    <td>38 - 50% (hombres) / 35 - 45% (mujeres)</td>
+                                </tr>
+                                <tr>
+                                    <td>Glóbulos Blancos</td>
+                                    <td id="glb">-</td>
+                                    <td>4,500 - 11,000/mm³</td>
+                                </tr>
+                                <tr>
+                                    <td>Plaquetas</td>
+                                    <td id="plt">-</td>
+                                    <td>150,000 - 450,000/mm³</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Perfil Bioquimico ----------------------- -->
+        <div class="modal fade" id="modalBioquimico" tabindex="-1" aria-labelledby="modal_Bioquimico_label"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Perfil Bioquimico</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table_Perfil_Bioquimico" id="table_Perfil_Bioquimico">
+                            <thead>
+                                <tr>
+                                    <th>Parámetro</th>
+                                    <th>Resultado</th>
+                                    <th>Valores de referencia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Glucosa en sangre</td>
+                                    <td id="gluc">-</td>
+                                    <td>70 - 110 mg/dL</td>
+                                </tr>
+                                <tr>
+                                    <td>Colesterol total</td>
+                                    <td id="coltot">-</td>
+                                    <td>&lt; 200 mg/dL</td>
+                                </tr>
+                                <tr>
+                                    <td>Colesterol LDL</td>
+                                    <td id="colldl">-</td>
+                                    <td>&lt; 130 mg/dL</td>
+                                </tr>
+                                <tr>
+                                    <td>Colesterol HDL</td>
+                                    <td id="colhdl">-</td>
+                                    <td>&gt; 40 mg/dL (hombres) / &gt; 50 mg/dL (mujeres)</td>
+                                </tr>
+                                <tr>
+                                    <td>Triglicéridos</td>
+                                    <td id="trig">-</td>
+                                    <td>&lt; 150 mg/dL</td>
+                                </tr>
+                                <tr>
+                                    <td>Ácido úrico</td>
+                                    <td id="au">-</td>
+                                    <td>3.4 - 7.2 mg/dL (hombres) / 2.4 - 6.0 mg/dL (mujeres)</td>
+                                </tr>
+                                <tr>
+                                    <td>Proteína C reactiva</td>
+                                    <td id="pcr">-</td>
+                                    <td>&lt; 1 mg/L</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Nuevo Examen ----------------------- -->
+        <div class="modal fade" id="modalNewExamen" tabindex="-1" aria-labelledby="modalNewExamenLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar Examen</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="nombrePaciente">Nombre Paciente:</label>
+                                <input type="text" class="form-control" id="nombrePaciente"
+                                    placeholder="Ingrese el nombre del paciente" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombreDoctor">Nombre Doctor:</label>
+                                <input type="text" class="form-control" id="nombreDoctor"
+                                    placeholder="Ingrese el nombre del doctor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="examen">Examen:</label>
+                                <select class="form-control" id="examen" required>
+                                    <option value="">Seleccione un examen</option>
+                                    <option value="Hemograma">Hemograma</option>
+                                    <option value="Perfil Lipidico">Perfil Lipidico</option>
+                                    <option value="Perfil Bioquimico">Perfil Bioquimico</option>
+                                    <option value="Orina">Orina</option>
+                                    <option value="Factor Coagulacion">Factor Coagulacion</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha">Fecha:</label>
+                                <input type="date" class="form-control" id="fecha" placeholder="Ingrese la fecha"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="archivo">Archivo:</label>
+                                <input type="file" class="form-control-file" id="archivo">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
