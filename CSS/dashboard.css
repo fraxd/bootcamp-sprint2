@@ -1,0 +1,162 @@
+.ico{
+    margin: 10px;
+    filter: invert(1) opacity(0.5) drop-shadow(0 0 0 rgb(0, 179, 250)); 
+
+}
+.nav2>a:hover>.ico{
+    margin: 10px;
+    filter: invert(1) ; 
+
+}
+@media (max-width:1280px) {
+
+    .bar_left {
+        padding-top: 10px;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: rgb(3, 46, 83);
+        box-shadow: 2px 0px 2px rgba(34, 34, 34, 0.678);
+        display: block;
+        margin-top: 0;
+        padding: 80px 0;
+        list-style: none;
+        transition-duration: .25s;
+        z-index: 2;
+    }
+
+    #nav_check {
+        display: none;
+    }
+
+    .pfp {
+        border-radius: 15px;
+        height: 30px;
+        float: left;
+        margin-right: 10px;
+
+    }
+
+    #nav_check:checked~.bar_left {
+        left: 0 !important;
+    }
+
+    #nav_check:checked~.menu_btn {
+        width: 115%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        left: -15%;
+        transition: 1s;
+    }
+
+    .menu_btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .menu_btn>span,
+    .menu_btn>span::before,
+    .menu_btn>span::after {
+        display: block;
+        border-radius: 6px;
+        position: relative;
+        width: 26px;
+        height: 4px;
+        background-color: rgb(7, 93, 168);
+        transition-duration: .25s;
+    }
+
+    .menu_btn>span::before {
+        content: '';
+        top: +10px;
+    }
+
+    .menu_btn>span::after {
+        content: '';
+        top: 16px;
+    }
+
+    span {
+        margin-left: 10%;
+        width: 80%;
+        height: 1px;
+        background-color: white;
+    }
+
+    .nav2>a {
+        padding-top: 5%;
+    }
+
+    
+
+    .nav2>a:hover {
+        font-size: large;
+        color: white;
+        background-color: blue;
+    }
+
+}
+
+@media (min-width:1280px) {
+    .container {
+        margin-left: 30%;
+        width: 70%;
+
+    }
+
+    .bar_left {
+        padding-top: 10px;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: rgb(3, 46, 83);
+        box-shadow: 2px 0px 2px rgba(34, 34, 34, 0.678);
+        z-index: 3;
+
+    }
+
+    .pfp {
+        border-radius: 15px;
+        height: 30px;
+        float: left;
+        margin-right: 10px;
+
+    }
+
+    span {
+        margin-left: 10%;
+        width: 80%;
+        height: 1px;
+        background-color: white;
+    }
+
+
+    .container {
+        margin-left: 30%;
+        width: 70%;
+
+    }
+
+    .nav2>a {
+        padding-top: 5%;
+        padding-left: 15%;
+    }
+
+    .nav2>a:hover {
+        font-size: large;
+        color: white;
+        background-color: blue;
+    }
+}
