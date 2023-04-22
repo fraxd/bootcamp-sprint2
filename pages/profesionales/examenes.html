@@ -1192,7 +1192,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form onsubmit="addExamen(event)">
                             <div class="form-group">
                                 <label for="nombrePaciente">Nombre Paciente:</label>
                                 <input type="text" class="form-control" id="nombrePaciente"
@@ -1222,12 +1222,10 @@
                             <div class="form-group">
                                 <label for="archivo">Archivo:</label>
                                 <input type="file" class="form-control-file" id="archivo">
-                            </div>  
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                            <button type="submit" onclick="addExamen(event)" class="btn btn-primary"
+                                data-bs-dismiss="modal">Enviar</button>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>

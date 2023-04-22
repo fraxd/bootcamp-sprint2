@@ -137,3 +137,33 @@ $('#colhdl').text(colhdl_value + ' mg/dL');
 $('#trig').text(trig_value + ' mg/dL');
 $('#au').text(au_value + ' mg/dL');
 $('#pcr').text(pcr_value + ' mg/L');
+
+// Funcion de agregar datos a la tabla
+
+function addExamen(e) {
+    e.preventDefault();
+
+    // Obtener los valores del formulario
+    var nombrePaciente = $('#nombrePaciente').val();
+    var nombreDoctor = $('#nombreDoctor').val();
+    var examen = $('#examen').val();
+    var fecha = $('#fecha').val();
+
+    // Crear una nueva fila en la tabla con los valores del formulario
+    var fila = '<tr>' +
+        '<td>' + nombrePaciente + '</td>' +
+        '<td>' + nombreDoctor + '</td>' +
+        '<td>' + examen + '</td>' +
+        '<td>' + fecha + '</td>' +
+        '<td> En proceso... </td>' +
+        '<td> En proceso... </td>' +
+        '</tr>';
+    $('#tabla_examen').append(fila);
+
+    // Limpiar los campos del formulario
+    $('#nombrePaciente').val('');
+    $('#nombreDoctor').val('');
+    $('#examen').val('');
+    $('#fecha').val('');
+    $('#archivo').val('');
+}
