@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awake-Health</title>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- NUEVA NAVBAR -->
+    <header class="navbar navbar-expand-md navbar-light bg-light py-3 mb-4 border-bottom">
+        <div class="container-fluid">
+            <a href="../" class="navbar-brand">
+                Awake Health
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a href="./pacientes.html" class="nav-link">Ficha Clinica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./alianzas.html" class="nav-link">Alianzas Estrategicas</a>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <button type="button" onclick="location.href='../../auth/login-publico.html'"
+                        class="btn btn-primary">Cerrar Sesión</button>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+
+    <!--antes de esto copia y pega el encabezado de las otras paginas-->
+    <div class="title text-center py-5">
+        <h1>Proveedores de salud asociados</h1>
+    </div>
+
+    <div class="container">
+        <div class="row d-flex">
+            <!--tarjeta 1-->
+            <div class="col-12 col-md-6 col-xl my-3">
+                <div class="card">
+                    <img src="https://www.psicologosypsiquiatras.cl/wp-content/uploads/2020/03/Bono-fonasa-online.png"
+                        class="card-img-top" alt="imagen de tarjeta">
+                    <div class="card-body">
+                        <h1>FONASA</h1>
+                        <p class="card-text">
+                            FONASA ofrece una amplia gama de servicios médicos, incluyendo atención ambulatoria,
+                            hospitalización, cirugía y cuidados intensivos.
+                        </p>
+                        <a href="https://www.fonasa.cl/" class="btn btn-primary">Enlace</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl my-3">
+                <div class="card">
+                    <img src="https://centromedicovallesalud.cl/wp-content/uploads/2018/08/banmedica-1150x388.png"
+                        class="card-img-top" alt="imagen de tarjeta">
+                    <div class="card-body">
+                        <h1>Banmédica</h1>
+                        <p class="card-text">
+                            Principal ISAPRE de Chile. Ofrece una amplia gama de servicios médicos, incluyendo atención
+                            ambulatoria, hospitalización, cirugía y cuidados intensivos. Banmédica cuenta con una amplia red
+                            de proveedores de salud en todo el país.
+                        </p>
+                        <a href="https://www.banmedica.cl/" class="btn btn-primary">Enlace</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-xl my-3">
+                <div class="card">
+                    <img src="https://www.bertonati.cl/wp-content/uploads/2019/11/75456935_1005157903158564_6050542986490544128_o-700x440.jpg"
+                        class="card-img-top" alt="imagen de tarjeta">
+                    <div class="card-body">
+                        <h1>E.M.S. Life Care Chile</h1>
+                        <p class="card-text">
+                            Realizan traslados de pacientes críticos, traslado de pacientes de mediana complejidad,
+                            urgencias y traslados básicos. Atienden las 24 horas del día, los 365 días del año. Ponemos a su
+                            disposición nuestras ambulancias, equipadas con la más alta tecnología y personal capacitado
+                            para un traslado seguro. </p>
+                        <a href="http://www.emslifecare.cl/" class="btn btn-primary">Enlace</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 col-xl my-3">
+            <div class="card">
+                <img src="https://www.redbionova.com/wp-content/uploads/2021/11/LogoHCUCH-650x0-c-default.jpg"
+                    class="card-img-top" alt="imagen de tarjeta">
+                <div class="card-body">
+                    <h1>Hospital Clínico de la Universidad de Chile</h1>
+                    <p class="card-text">
+                        Es uno de los hospitales más grandes y prestigiosos de Santiago de Chile. Ofrece servicios
+                        médicos en una amplia variedad de especialidades, incluyendo cardiología, neurología, oncología
+                        y pediatría.
+                        El hospital cuenta con tecnología de última generación y un equipo de profesionales altamente
+                        capacitados.</p>
+                    <a href="https://www.sick.com/es/es/sick-sensor-blog/comprobar-codigos-de-barras-en-tubos-de-ensayo-el-socio-que-cuida-al-maximo-los-detalles/w/blog-tube-labels-identification-solution/"
+                        class="btn btn-primary">Enlace</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl my-3">
+            <div class="card">
+                <img src="https://www.clinicasdechile.cl/wp-content/uploads/2016/03/valparaiso-180x120.png"
+                    class="card-img-top" alt="imagen de tarjeta">
+                <div class="card-body">
+                    <h1>Clínica Redsalud Valparaíso
+                    </h1>
+                    <p class="card-text">
+                        Clínica de alta complejidad y resolutividad, que cuenta con un amplio staff de médicos
+                        especialistas;
+                        que brinda atención integral y de calidad a los habitantes de la Región de Valparaíso.</p>
+                    <a href="https://www.redsalud.cl/nuestra-red/clinicas/clinica-redsalud-valparaiso"
+                        class="btn btn-primary">Enlace</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-12 col-xl my-3">
+            <div class="card">
+                <img src="https://www.clinicasdechile.cl/wp-content/uploads/2016/03/Viña-del-Mar-e1465589901412-169x120.png"
+                    class="card-img-top" alt="imagen de tarjeta">
+                <div class="card-body">
+                    <h1>Hospital Clínico Viña del Mar</h1>
+                    <p class="card-text">
+                        Con el objetivo de entregar una atención integral, garantizando rapidez, comodidad y una
+                        atención médica de primer nivel, el centro médico de Hospital Clínico Viña del Mar cuenta con
+                        doctores acreditados y especializados en diversas áreas,
+                        además de dar servicios de hospitalización y urgencias.</p>
+                    <a href="https://www.sick.com/es/es/sick-sensor-blog/comprobar-codigos-de-barras-en-tubos-de-ensayo-el-socio-que-cuida-al-maximo-los-detalles/w/blog-tube-labels-identification-solution/"
+                        class="btn btn-primary">Enlace</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-12 col-md-6 col-xl my-3">
+            <div class="card" >
+                <img src="https://www.clinicaisv.cl/wp-content/uploads/2018/05/cropped-logoconleyenda_-transparente.png"
+                    class="card-img-top" alt="imagen de tarjeta">
+                <div class="card-body">
+                    <h1>Clínica Oftalmológica ISV</h1>
+                    <p class="card-text">
+                        ofreciendo servicios de atención médica,
+                        exámenes, procedimientos y cirugía oftalmológica en sus distintas sedes en la región de
+                        Valparaiso.
+                    </p>
+                    <a href="https://www.clinicaisv.cl/" class="btn btn-primary">Enlace</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl my-3 ">
+            <div class="card" >
+                <img src="https://teledoc.cl/wp-content/uploads/2021/01/Teledoc-cl_morado_2.png" class="card-img-top"
+                    alt="imagen de tarjeta">
+                <div class="card-body">
+                    <h1>Teledoc Chile</h1>
+                    <p class="card-text">
+                        TeleDoc es un servicio de atención médica de telemedicina con la asistencia de medicina general
+                        24/7
+                        y agendamiento de especialidades. Con atención FONASA, ISAPRES, particular y con convenios. </p>
+                    <a href="https://teledoc.cl/" class="btn btn-primary">Enlace</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- Footer-->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Awake Health, Inc</span>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS PROPIOS Y EXTERNOS -->
+    <script src="../JS/auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.js"
+        integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+</body>
