@@ -4,46 +4,48 @@ document.getElementById('ingresoForm').addEventListener('submit', function (even
     event.preventDefault();
 
     // Obtener los valores de los campos de formulario
-    var nombrePaciente = document.getElementById('nombrePaciente').value;
-    var diagnostico = document.getElementById('diagnostico').value;
-    var fecha = document.getElementById('fecha').value;
-    var tratamiento = document.getElementById('Hora').value;
-    var otrosDatos = document.getElementById('otrosDatos').value;
-
-    // Crear una nueva fila en la tabla con los datos ingresados
-    var fila = document.createElement('tr');
-    fila.innerHTML = '<td>' + nombrePaciente + '</td><td>' + diagnostico + '</td><td>' + fecha + '</td><td>' + tratamiento + '</td><td>' + otrosDatos + '</td>';
-
-    // Agregar la fila a la tabla
-    document.getElementById('tablaDatos').getElementsByTagName('tbody')[0].appendChild(fila);
-
-    // Limpiar los campos del formulario
-    document.getElementById('nombrePaciente').value = '';
-    document.getElementById('diagnostico').value = '';
-    document.getElementById('fecha').value = '';
-    document.getElementById('tratamiento').value = '';
-    document.getElementById('otrosDatos').value = '';
-
+    let nombrePaciente = document.getElementById('nombrePaciente').value;
+    let diagnostico = document.getElementById('diagnostico').value;
+    let fecha = document.getElementById('fecha').value;
+    let tratamiento = document.getElementById('Hora').value;
+    let otrosDatos = document.getElementById('otrosDatos').value;
+    
      //objeto usuario
     let usuario = {};
     usuario.nombrePaciente = nombrePaciente ; 
+    usuario.fecha= fecha;
     window.usuarios.push(usuario);
-    window.crearcita();
+    window.llenarCalendario();
 });
 
-
-
-window.addEventListener('load', function() { window.crearcita();})
-window.crearcita = function() {
+window.addEventListener('load', function () {
+    window.crearCalendario();
+    
+})
+window.crearCalendario = function() {
 let cita = document.querySelector("#ol")
 for (let i = 0; i < 31; i++) {
-let entrada = window.usuarios[i];
 let dia = document.createElement("li")
 let postit = document.createElement("p")
 dia.setAttribute("id", "dia"+i)
 cita.appendChild(dia)
 dia.appendChild(postit)
-postit.innerText = entrada.nombrePaciente
-
+postit.innerText= i;
+ 
+}
+}
+window.llenarCalendario=function(){
+    for (let i = 0; i < 31; i++) {
+        for (let e=0;e<window.usuarios.length;e++){
+            let entrada = window.usuarios[e];
+            day= entrada.fecha.charAt(8) + entrada.fecha.charAt(9);
+            month=entrada.fecha.charAt(5) + entrada.fecha.charAt(6);
+            year= entrada.fecha.charAt(0) + entrada.fecha.charAt(1)+ entrada.fecha.charAt(2) + entrada.fecha.charAt(3);
+            console.log(day+month+year);
+            if(day==i){
+                let card = document.querySelector("#dia"+i)
+                card.innerText = entrada.nombrePaciente;
+            }
+        }
 }
 }
