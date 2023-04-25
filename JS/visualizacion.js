@@ -1,24 +1,50 @@
-document.getElementById('ingresoForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+// Variable para almacenar los registros de enfermedades
+var registrosEnfermedades = [];
 
-    // Obtener los valores de los campos de formulario
-    var nombrePaciente = document.getElementById('nombrePaciente').value;
-    var diagnostico = document.getElementById('diagnostico').value;
-    var fecha = document.getElementById('fecha').value;
-    var tratamiento = document.getElementById('tratamiento').value;
-    var otrosDatos = document.getElementById('otrosDatos').value;
+// función para agregar el regsistro
+function agregarRegistro() {
+    // obtener los valores del formulario
+    var nombrePaciente = document.getElementById("nombrePacienteInput").value;
+    var diagnostico = document.getElementById("diagnosticoInput").value;
+    var fecha = document.getElementById("fechaInput").value;
+    var inicioTratamiento = document.getElementById("inicioTratamientoInput").value;
+    var otrosDatos = document.getElementById("otrosDatosInput").value;
 
-    // Crear una nueva fila en la tabla con los datos ingresados
-    var fila = document.createElement('tr');
-    fila.innerHTML = '<td>' + nombrePaciente + '</td><td>' + diagnostico + '</td><td>' + fecha + '</td><td>' + tratamiento + '</td><td>' + otrosDatos + '</td>';
+    // objeto para el registro de las enfermedades
+    var registro = {
+        nombrePaciente: nombrePaciente,
+        diagnostico: diagnostico,
+        fecha: fecha,
+        inicioTratamiento: inicioTratamiento,
+        otrosDatos: otrosDatos
+    };
 
-    // Agregar la fila a la tabla
-    document.getElementById('tablaDatos').getElementsByTagName('tbody')[0].appendChild(fila);
+    // agrega el registro los datos
+    registrosEnfermedades.push(registro);
 
-    // Limpiar los campos del formulario
-    document.getElementById('nombrePaciente').value = '';
-    document.getElementById('diagnostico').value = '';
-    document.getElementById('fecha').value = '';
-    document.getElementById('tratamiento').value = '';
-    document.getElementById('otrosDatos').value = '';
-});
+    // actualizar la tabla de registros
+    actualizarTabla();
+
+    // limpiar el formulario
+    document.getElementById("registroForm").reset();
+
+    // cerrar el modal
+    $('#modalRegistro').modal('hide');
+}
+
+// actualizar la tabla de registros
+function actualizarTabla() {
+    var tableBody = document.getElementById("registrosTableBody");
+    tableBody.innerHTML = "";
+
+    for (var i = 0; i < registrosEnfermedades.length; i++) {
+        var registro = registrosEnfermedades[i];
+
+        var row = document.createElement("tr");
+        row.innerHTML = "<td>" + registro.nombrePaciente + "</td><td>" + registro.diagnostico + "</td><td>" + registro.fecha + "</td><td>" + registro.inicioTratamiento + "</td><td>" + registro.otrosDatos + "</td>";
+        tableBody.appendChild(row);
+    }
+}
+
+// boton para agregar el registro
+document.getElementById("agregarRegistroBtn").addEventListener("click", agregarRegistro);

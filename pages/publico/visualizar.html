@@ -31,55 +31,68 @@
         </div>
     </header>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Ingreso y visualización de datos de pacientes</h1>
+        <h1>Registro de Enfermedades y condiciones base</h1>
+        <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#modalRegistro">Agregar Registro</button>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th>Nombre del Paciente</th>
+                    <th>Diagnóstico</th>
+                    <th>Fecha</th>
+                    <th>Inicio de Tratamiento</th>
+                    <th>Otros Datos</th>
+                </tr>
+            </thead>
+            <tbody id="registrosTableBody"></tbody>
+        </table>
+    </div>
 
-        <!-- Formulario de ingreso de datos -->
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Ingreso de datos</h2>
-                <form id="ingresoForm">
-                    <div class="form-group">
-                        <label for="nombrePaciente">Nombre del Paciente:</label>
-                        <input type="text" class="form-control" id="nombrePaciente" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="diagnostico">Diagnóstico:</label>
-                        <input type="text" class="form-control" id="diagnostico" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fecha">Fecha:</label>
-                        <input type="date" class="form-control" id="fecha" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="tratamiento">Inicio de Tratamiento:</label>
-                        <input type="text" class="form-control" id="tratamiento" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="otrosDatos">Otros datos:</label>
-                        <input type="text" class="form-control" id="otrosDatos" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                </form>
-            </div>
-
-            <!-- Tabla de visualización de datos -->
-            <div class="col-md-6">
-                <h2>Visualización de datos</h2>
-                <table class="table table-striped" id="tablaDatos">
-                    <thead>
-                        <tr>
-                            <th>Nombre del Paciente</th>
-                            <th>Diagnóstico</th>
-                            <th>Fecha</th>
-                            <th>Inicio de Tratamiento</th>
-                            <th>Otros datos</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRegistroLabel">Agregar Registro de Enfermedad</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="registroForm">
+                        <div class="form-group">
+                            <label for="nombrePacienteInput">Nombre del Paciente</label>
+                            <input type="text" class="form-control" id="nombrePacienteInput"
+                                placeholder="Nombre del Paciente">
+                        </div>
+                        <div class="form-group">
+                            <label for="diagnosticoInput">Diagnóstico</label>
+                            <input type="text" class="form-control" id="diagnosticoInput" placeholder="Diagnóstico">
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaInput">Fecha</label>
+                            <input type="date" class="form-control" id="fechaInput">
+                        </div>
+                        <div class="form-group">
+                            <label for="inicioTratamientoInput">Inicio de Tratamiento</label>
+                            <input type="text" class="form-control" id="inicioTratamientoInput"
+                                placeholder="Inicio de Tratamiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="otrosDatosInput">Otros Datos</label>
+                            <textarea class="form-control" id="otrosDatosInput" rows="3"
+                                placeholder="Otros Datos"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="agregarRegistroBtn">Agregar Registro</button>
+                </div>
             </div>
         </div>
     </div>
+
     <!-- Footer-->
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
@@ -92,15 +105,10 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS PROPIOS Y EXTERNOS -->
+    <!-- scripts y referencias -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.js"
-        integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../../js/visualizacion.js"></script>
 </body>
 
