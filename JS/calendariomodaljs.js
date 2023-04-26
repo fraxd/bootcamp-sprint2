@@ -1,28 +1,5 @@
 window.usuarios = [];
 
-document.getElementById('ingresoForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    // Obtener los valores de los campos de formulario
-    let nombrePaciente = document.getElementById('nombrePaciente').value;
-    let diagnostico = document.getElementById('diagnostico').value;
-    let fecha = document.getElementById('fecha').value;
-    let hora = document.getElementById('hora').value;
-    let medico = document.getElementById('medico').value;
-
-    //objeto usuario
-    let usuario = {};
-    usuario.nombrePaciente = nombrePaciente;
-    usuario.fecha = fecha;
-    usuario.diagnostico = diagnostico;
-    usuario.medico = medico;
-    usuario.hora = hora;
-    window.usuarios.push(usuario);
-    window.llenarCalendario();
-
-    $('#modalRegistro').modal('hide');
-});
-
 window.addEventListener('load', function () {
     window.crearCalendario();
 
