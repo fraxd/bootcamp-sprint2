@@ -7,13 +7,16 @@ document.getElementById('ingresoForm').addEventListener('submit', function (even
     let nombrePaciente = document.getElementById('nombrePaciente').value;
     let diagnostico = document.getElementById('diagnostico').value;
     let fecha = document.getElementById('fecha').value;
-    let tratamiento = document.getElementById('Hora').value;
-    let otrosDatos = document.getElementById('otrosDatos').value;
+    let hora = document.getElementById('hora').value;
+    let medico = document.getElementById('medico').value;
     
      //objeto usuario
     let usuario = {};
     usuario.nombrePaciente = nombrePaciente ; 
     usuario.fecha= fecha;
+    usuario.diagnostico = diagnostico;
+    usuario.medico = medico;
+    usuario.hora = hora;
     window.usuarios.push(usuario);
     window.llenarCalendario();
 });
@@ -34,7 +37,6 @@ if(i>0){
 postit.innerText= i;
 }
 
- 
 }
 }
 window.llenarCalendario=function(){
@@ -49,7 +51,7 @@ window.llenarCalendario=function(){
             if(day==i && month==04 && year==2023){
                 let d= document.createElement("div");
                 card.appendChild(d);
-                d.innerText=entrada.nombrePaciente;
+                d.innerText= entrada.nombrePaciente + entrada.diagnostico + entrada.hora + entrada.medico;
             }
         }
 }
