@@ -51,7 +51,7 @@ window.llenarCalendario=function(){
             if(day==i && month==04 && year==2023){
                 let d= document.createElement("div");
                 card.appendChild(d);
-                d.innerText= entrada.nombrePaciente + entrada.diagnostico + entrada.hora + entrada.medico;
+                d.innerText= entrada.nombrePaciente  + '-' + entrada.diagnostico + '-' + entrada.hora + '-' + entrada.medico;
             }
         }
 }
