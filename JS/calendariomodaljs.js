@@ -19,6 +19,8 @@ document.getElementById('ingresoForm').addEventListener('submit', function (even
     usuario.hora = hora;
     window.usuarios.push(usuario);
     window.llenarCalendario();
+
+    $('#modalRegistro').modal('hide');
 });
 
 window.addEventListener('load', function () {
@@ -56,3 +58,6 @@ window.llenarCalendario=function(){
         }
 }
 }
+
+// boton para agregar el registro
+document.getElementById('ingresoForm').addEventListener("click", agregarRegistro);
