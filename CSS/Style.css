@@ -13,3 +13,32 @@
     background-size: cover;
     background-position: center;
 }
+
+/** CALENDARIO.HTML **/
+#calendario {
+    text-align: center;
+
+}
+ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0;
+    
+}
+.first-day {
+    grid-column-start: 6;
+}
+li {
+    text-align: right;
+    
+}
+[id*="di"] {
+    border: 1px solid black;
+}
+.day-name {
+    background-color: rgb(33, 35, 43);
+    font-weight: bold;
+    color: aliceblue;
+    text-align: center;
+}
