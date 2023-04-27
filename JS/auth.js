@@ -22,22 +22,26 @@ let usuario = [
 function login_profesional(e) {
     e.preventDefault();
     // Obtenemos los valores de los campos del formulario
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var email = document.getElementById("email-login").value;
+    var password = document.getElementById("password-login").value;
 
     // Enviamos los datos del formulario a un servidor o API
     var flagLogin = false;
     usuario.forEach(user => {
         if (user.email == email) {
-            if (user.password == password) {
-                console.log('oki doki')
-                flagLogin = true
-                localStorage.setItem('user', JSON.stringify(user.email));
-                localStorage.setItem('rol', JSON.stringify(user.rol));
-                localStorage.setItem('nombre', JSON.stringify(user.nombre));
-                window.location.href = '../pages/dashboard.html';
+            if (user.rol == 'profesional') {
+                if (user.password == password) {
+                    console.log('oki doki')
+                    flagLogin = true;
+                    localStorage.setItem('user', JSON.stringify(user.email));
+                    localStorage.setItem('rol', JSON.stringify(user.rol));
+                    localStorage.setItem('nombre', JSON.stringify(user.nombre));
+                    window.location.href = '../pages/profesionales/dashboard.html';
+                }
+            } else {
+                alert('Ups, parece que no eres un profesional')
+                flagLogin = true;
             }
-            else alert('Algo fallo, que cosa? no sabemos')
         }
 
     })
@@ -91,23 +95,26 @@ function register_profesional(e) {
 function login_publico(e) {
     e.preventDefault();
     // Obtenemos los valores de los campos del formulario
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var email = document.getElementById("email-login").value;
+    var password = document.getElementById("password-login").value;
 
     // Enviamos los datos del formulario a un servidor o API
     var flagLogin = false;
     usuario.forEach(user => {
         if (user.email == email) {
-            if (user.password == password) {
-                console.log('oki doki')
-                flagLogin = true
-                localStorage.setItem('user', JSON.stringify(user.email));
-                localStorage.setItem('rol', JSON.stringify(user.rol));
-                localStorage.setItem('nombre', JSON.stringify(user.nombre));
-                window.location.href = '../pages/publico/pacientes.html';
-                // Perfil para editar paciente (? -- Hay que ver bien eso
+            if (user.rol == 'paciente') {
+                if (user.password == password) {
+                    flagLogin = true;
+                    localStorage.setItem('user', JSON.stringify(user.email));
+                    localStorage.setItem('rol', JSON.stringify(user.rol));
+                    localStorage.setItem('nombre', JSON.stringify(user.nombre));
+                    window.location.href = '../pages/publico/pacientes.html';
+                }
             }
-            else alert('Algo fallo, que cosa? no sabemos')
+            else {
+                alert('Ups, al parecer no eres un paciente.');
+                flagLogin = true;
+            }
         }
 
     })
