@@ -35,7 +35,7 @@ function login_profesional(e) {
                 localStorage.setItem('user', JSON.stringify(user.email));
                 localStorage.setItem('rol', JSON.stringify(user.rol));
                 localStorage.setItem('nombre', JSON.stringify(user.nombre));
-                window.location.href = '../pages/dashboard.html';
+                window.location.href = '../pages/profesionales/dashboard.html';
             }
             else alert('Algo fallo, que cosa? no sabemos')
         }
