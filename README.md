@@ -9,6 +9,8 @@ Bootcamp Fullstack Python | Modulo 2 - Sprint 2
  - Franco Fuentes 
  - Francisco Olivares
 
+Repositiorio: https://github.com/fraxd/bootcamp-sprint2
+Deploy: https://fraxd.github.io/bootcamp-sprint2/
 Usuarios Prueba:
 - {
     nombre: "Dr. House",
