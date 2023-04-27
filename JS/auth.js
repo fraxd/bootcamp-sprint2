@@ -22,8 +22,8 @@ let usuario = [
 function login_profesional(e) {
     e.preventDefault();
     // Obtenemos los valores de los campos del formulario
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var email = document.getElementById("email-login").value;
+    var password = document.getElementById("password-login").value;
 
     // Enviamos los datos del formulario a un servidor o API
     var flagLogin = false;
@@ -94,14 +94,14 @@ function register_profesional(e) {
 function login_publico(e) {
     e.preventDefault();
     // Obtenemos los valores de los campos del formulario
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var email = document.getElementById("email-login").value;
+    var password = document.getElementById("password-login").value;
 
     // Enviamos los datos del formulario a un servidor o API
     var flagLogin = false;
     usuario.forEach(user => {
         if (user.email == email) {
-            if (user.rol = 'paciente') {
+            if (user.rol == 'paciente') {
                 if (user.password == password) {
                     flagLogin = true
                     localStorage.setItem('user', JSON.stringify(user.email));
