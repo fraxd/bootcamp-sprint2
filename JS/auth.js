@@ -29,15 +29,19 @@ function login_profesional(e) {
     var flagLogin = false;
     usuario.forEach(user => {
         if (user.email == email) {
-            if (user.password == password) {
-                console.log('oki doki')
-                flagLogin = true
-                localStorage.setItem('user', JSON.stringify(user.email));
-                localStorage.setItem('rol', JSON.stringify(user.rol));
-                localStorage.setItem('nombre', JSON.stringify(user.nombre));
-                window.location.href = '../pages/profesionales/dashboard.html';
+            if (user.rol == 'profesional') {
+                if (user.password == password) {
+                    flagLogin = true
+                    localStorage.setItem('user', JSON.stringify(user.email));
+                    localStorage.setItem('rol', JSON.stringify(user.rol));
+                    localStorage.setItem('nombre', JSON.stringify(user.nombre));
+                    window.location.href = '../pages/profesionales/dashboard.html';
+                }
             }
-            else alert('Algo fallo, que cosa? no sabemos')
+            else {
+                alert('Ups, no eres un profesional.')
+                flagLogin = true;
+            }
         }
 
     })
@@ -51,7 +55,6 @@ function login_profesional(e) {
 
 // Register Usuarios Profesionales
 function register_profesional(e) {
-    console.log('ADENTRO EJALE ')
     e.preventDefault();
     // Obtenemos los valores de los campos del formulario
     var email = document.getElementById("email").value;
@@ -98,16 +101,21 @@ function login_publico(e) {
     var flagLogin = false;
     usuario.forEach(user => {
         if (user.email == email) {
-            if (user.password == password) {
-                console.log('oki doki')
-                flagLogin = true
-                localStorage.setItem('user', JSON.stringify(user.email));
-                localStorage.setItem('rol', JSON.stringify(user.rol));
-                localStorage.setItem('nombre', JSON.stringify(user.nombre));
-                window.location.href = '../pages/publico/pacientes.html';
-                // Perfil para editar paciente (? -- Hay que ver bien eso
+            if (user.rol = 'paciente') {
+                if (user.password == password) {
+                    flagLogin = true
+                    localStorage.setItem('user', JSON.stringify(user.email));
+                    localStorage.setItem('rol', JSON.stringify(user.rol));
+                    localStorage.setItem('nombre', JSON.stringify(user.nombre));
+                    window.location.href = '../pages/publico/pacientes.html';
+                    // Perfil para editar paciente (? -- Hay que ver bien eso
+                }
+
             }
-            else alert('Algo fallo, que cosa? no sabemos')
+            else {
+                flagLogin = true;
+                alert('No eres un paciente.')
+            }
         }
 
     })
