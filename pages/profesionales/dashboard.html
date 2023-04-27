@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Awake-Health</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../css/dashboard.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="..css/dashboard.css">
+</head>
+
+<body>
+  <header class="d-flex flex-wrap justify-content-md-between py-3 border-bottom">
+    <input id="nav_check" type="checkbox">
+    <label class="menu_btn" for="nav_check">
+      <span></span>
+    </label>
+    <div class="col-md-3 col-sm-3 mb-2 mb-md-0">
+
+      <a href="dashboard.html" class="navbar-brand">
+        Awake Health
+      </a>
+    </div>
+    <div class="col-md-3 col-sm-3 text-end">
+      <button type="button" onclick=" location.href='../../auth/login-profesional.html'"
+        class="btn btn-primary w-100">Cerrar
+        Sesion</button>
+    </div>
+
+    <div class="bar_left">
+      <nav class="nav flex-column nav2">
+        <a class="nav-link" href="#"><img class="pfp" src="../../img/pfp.jpg" alt="">
+          <h3>Dr.House</h3>
+        </a>
+        <span></span>
+        <a class="nav-link" href="nuevousuario.html"><img class="ico" src="../../img/grupo.png" height="30" alt="">
+          Usuarios</a>
+        <a class="nav-link" href="visualizar.html"><img class="ico" src="../../img/paciente.png" height="30" alt="">
+          Pacientes</a>
+        <a class="nav-link" href="examenes.html"> <img class="ico" src="../../img/examen.png" height="30" alt="">
+          Examenes</a>
+        <a class="nav-link" href="agenda.html"><img class="ico" src="../../img/calendario.png" height="30" alt="">
+          Agenda de
+          citas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div style="text-align:center; margin-bottom:10%;">
+      <h3 class="fs-3">Bienvenido Dr. House</h3>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col">
+          <div class="card mb-4 shadow-sm">
+            <div id="ue" class="card-body">
+              <h5 class="card-title">Últimos Examenes.</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Paciente</th>
+                    <th scope="col">Doctor(a)</th>
+                    <th scope="col">Examen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">22/04/2023 </th>
+                    <td>MarkVanna Huber</td>
+                    <td>Dr. Simi</td>
+                    <td>Factor Coagulacion </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19/04/2023 </th>
+                    <td>Melvin Sanchez</td>
+                    <td>Dr. Milagro</td>
+                    <td>Factor Coagulacion </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19/04/2023</th>
+                    <td>Shad Benson</td>
+                    <td>Dr. House</td>
+                    <td>Hemograma </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18/04/2023 </th>
+                    <td>Aladdin Rush</td>
+                    <td>Dr. Milagro </td>
+                    <td>Perfil Lipidico</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18/04/2023 </th>
+                    <td>Kirestin Jackson</td>
+                    <td>Dr. ugarte</td>
+                    <td>Perfil Bioquimico</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col">
+          <div class="card mb-4 shadow-sm">
+            <div id="np" class="card-body">
+              <h5 class="card-title">Nuevos Pacientes.</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Paciente</th>
+                    <th scope="col">Doctor(a)</th>
+                    <th scope="col">Edad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">22/04/2023 </th>
+                    <td>Juan Enfermin</td>
+                    <td>no asignado</td>
+                    <td>27</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22/04/2023 </th>
+                    <td>Maximiliano Enfermin</td>
+                    <td>Dr.simi</td>
+                    <td>53</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col">
+          <div class="card mb-4 shadow-sm">
+            <div id="ua" class="card-body">
+              <h5 class="card-title">Usuarios adicionales.</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Edad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">22/04/2023 </th>
+                    <td>Andrea Enfermin</td>
+                    <td>Familiar</td>
+                    <td>29</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col">
+          <div class="card mb-4 shadow-sm">
+            <div id="cp" class="card-body">
+              <h5 class="card-title">Citas pendientes.</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Paciente</th>
+                    <th scope="col">Doctor(a)</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Citado a</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">23/04/2023 </th>
+                    <td>Melvin Sanchez</td>
+                    <td>Dr. Milagro</td>
+                    <td>43</td>
+                    <td>Entrega de examenes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">25/04/2023 </th>
+                    <td>MarkVanna Huber</td>
+                    <td>Dr. Simi</td>
+                    <td>35</td>
+                    <td>Entrega de examenes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15/05/2023 </th>
+                    <td>Maximiliano Enfermin</td>
+                    <td>no asignado</td>
+                    <td>53</td>
+                    <td>Examen de Prostata</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.slim.js"
+    integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+</body>
+
+</html>

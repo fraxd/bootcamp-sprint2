@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device--width, initial-scale=1.0">
+    <link href="../../css/dashboard.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Ingreso y visualización</title>
+</head>
+
+<body>
+    <header class="d-flex flex-wrap justify-content-md-between py-3 border-bottom">
+        <input id="nav_check" type="checkbox">
+        <label class="menu_btn" for="nav_check">
+            <span></span>
+        </label>
+        <div class="col-md-3 col-sm-3 mb-2 mb-md-0">
+
+            <a href="dashboard.html" class="navbar-brand">
+                Awake Health
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-3 text-end">
+            <button type="button" onclick=" location.href='../../auth/login-profesional.html'"
+                class="btn btn-primary w-100">Cerrar
+                Sesion</button>
+        </div>
+
+        <div class="bar_left">
+            <nav class="nav flex-column nav2">
+                <a class="nav-link" href="#"><img class="pfp" src="../../img/pfp.jpg" alt="">
+                    <h3>Dr.House</h3>
+                </a>
+                <span></span>
+                <a class="nav-link" href="nuevousuario.html"><img class="ico" src="../../img/grupo.png" height="30"
+                        alt="">
+                    Usuarios</a>
+                <a class="nav-link" href="visualizar.html"><img class="ico" src="../../img/paciente.png" height="30"
+                        alt="">
+                    Pacientes</a>
+                <a class="nav-link" href="examenes.html"> <img class="ico" src="../../img/examen.png" height="30"
+                        alt="">
+                    Examenes</a>
+                <a class="nav-link" href="agenda.html"><img class="ico" src="../../img/calendario.png" height="30"
+                        alt="">
+                    Agenda de
+                    citas</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <h1>Registro de Enfermedades y Tratamientos</h1>
+            <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#modalRegistro">Agregar
+                Registro</button>
+            <table class="table mt-3">
+                <thead>
+                    <tr>
+                        <th>Nombre del Paciente</th>
+                        <th>Diagnóstico</th>
+                        <th>Fecha</th>
+                        <th>Inicio de Tratamiento</th>
+                        <th>Otros Datos</th>
+                    </tr>
+                </thead>
+                <tbody id="registrosTableBody"></tbody>
+            </table>
+        </div>
+        <!-- Footer-->
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Awake Health, Inc</span>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRegistroLabel">Agregar Registro de Enfermedad</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="registroForm">
+                        <div class="form-group">
+                            <label for="nombrePacienteInput">Nombre del Paciente</label>
+                            <input type="text" class="form-control" id="nombrePacienteInput"
+                                placeholder="Nombre del Paciente">
+                        </div>
+                        <div class="form-group">
+                            <label for="diagnosticoInput">Diagnóstico</label>
+                            <input type="text" class="form-control" id="diagnosticoInput" placeholder="Diagnóstico">
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaInput">Fecha</label>
+                            <input type="date" class="form-control" id="fechaInput">
+                        </div>
+                        <div class="form-group">
+                            <label for="inicioTratamientoInput">Inicio de Tratamiento</label>
+                            <input type="text" class="form-control" id="inicioTratamientoInput"
+                                placeholder="Inicio de Tratamiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="otrosDatosInput">Otros Datos</label>
+                            <textarea class="form-control" id="otrosDatosInput" rows="3"
+                                placeholder="Otros Datos"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="agregarRegistroBtn">Agregar Registro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts y referencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../../js/visualizacion.js"></script>
+</body>
+
+</html>
