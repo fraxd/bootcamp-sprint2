@@ -5,46 +5,82 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device--width, initial-scale=1.0">
+    <link href="../../css/dashboard.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Ingreso y visualización</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-    <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <div class="col-md-3 mb-2 mb-md-0">
-            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+    <header class="d-flex flex-wrap justify-content-md-between py-3 border-bottom">
+        <input id="nav_check" type="checkbox">
+        <label class="menu_btn" for="nav_check">
+            <span></span>
+        </label>
+        <div class="col-md-3 col-sm-3 mb-2 mb-md-0">
+
+            <a href="dashboard.html" class="navbar-brand">
                 Awake Health
             </a>
         </div>
-
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary">Inicio</a></li>
-        </ul>
-
-        <div class="col-md-3 text-end">
-            <button type="button" onclick=" location.href='../../auth/login-profesional.html'"
-                class="btn btn-primary">Cerrar
+        <div class="col-md-3 col-sm-3 text-end">
+            <button type="button" onclick=" location.href='../auth/login-profesional.html'"
+                class="btn btn-primary w-100">Cerrar
                 Sesion</button>
         </div>
+
+        <div class="bar_left">
+            <nav class="nav flex-column nav2">
+                <a class="nav-link" href="perfil.html"><img class="pfp" src="../../IMG/pfp.jpg" alt="">
+                    <h3>Dr.House</h3>
+                </a>
+                <span></span>
+                <a class="nav-link" href="nuevousuario.html"><img class="ico" src="../../IMG/grupo.png" height="30"
+                        alt="">
+                    Usuarios</a>
+                <a class="nav-link" href="visualizar.html"><img class="ico" src="../../IMG/paciente.png" height="30"
+                        alt="">
+                    Pacientes</a>
+                <a class="nav-link" href="examenes.html"> <img class="ico" src="../../IMG/examen.png" height="30"
+                        alt="">
+                    Examenes</a>
+                <a class="nav-link" href="agenda.html"><img class="ico" src="../../IMG/calendario.png" height="30"
+                        alt="">
+                    Agenda de
+                    citas</a>
+            </nav>
+        </div>
     </header>
-    <div class="container mt-5">
-        <h1>Registro de Enfermedades y Tratamientos</h1>
-        <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#modalRegistro">Agregar Registro</button>
-        <table class="table mt-3">
-            <thead>
-                <tr>
-                    <th>Nombre del Paciente</th>
-                    <th>Diagnóstico</th>
-                    <th>Fecha</th>
-                    <th>Inicio de Tratamiento</th>
-                    <th>Otros Datos</th>
-                </tr>
-            </thead>
-            <tbody id="registrosTableBody"></tbody>
-        </table>
-    </div>
+    <main>
+        <div class="container mt-5">
+            <h1>Registro de Enfermedades y Tratamientos</h1>
+            <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#modalRegistro">Agregar
+                Registro</button>
+            <table class="table mt-3">
+                <thead>
+                    <tr>
+                        <th>Nombre del Paciente</th>
+                        <th>Diagnóstico</th>
+                        <th>Fecha</th>
+                        <th>Inicio de Tratamiento</th>
+                        <th>Otros Datos</th>
+                    </tr>
+                </thead>
+                <tbody id="registrosTableBody"></tbody>
+            </table>
+        </div>
+        <!-- Footer-->
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Awake Health, Inc</span>
+            </div>
+        </footer>
+    </main>
 
     <!-- Modal de Registro -->
     <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel"
@@ -91,18 +127,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Footer-->
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Awake Health, Inc</span>
-        </div>
-    </footer>
 
     <!-- scripts y referencias -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

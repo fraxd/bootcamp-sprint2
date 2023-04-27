@@ -9,7 +9,9 @@
 
 }
 @media (max-width:1280px) {
-
+    .navbar-brand{
+        margin-left: 20%;
+    }
     .bar_left {
         padding-top: 10px;
         display: block;
@@ -107,9 +109,8 @@
 }
 
 @media (min-width:1280px) {
-    .container {
-        margin-left: 30%;
-        width: 70%;
+    main {
+        margin-left: 20%;
 
     }
 

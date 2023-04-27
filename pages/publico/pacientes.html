@@ -12,21 +12,32 @@
 </head>
 
 <body>
-    <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <div class="col-md-3 mb-2 mb-md-0">
-            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+    <header class="navbar navbar-expand-md navbar-light bg-light py-3 mb-4 border-bottom">
+        <div class="container-fluid">
+            <a href="../" class="navbar-brand">
                 Awake Health
             </a>
-        </div>
 
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary">Inicio</a></li>
-        </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="col-md-3 text-end">
-            <button type="button" onclick=" location.href='../../auth/login-publico.html'" class="btn btn-primary">Cerrar
-                Sesion</button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a href="./pacientes.html" class="nav-link">Ficha Clinica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./alianzas.html" class="nav-link">Alianzas Estrategicas</a>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <button type="button" onclick="location.href='../../auth/login-publico.html'"
+                        class="btn btn-primary">Cerrar Sesión</button>
+                </div>
+            </div>
+
+
         </div>
     </header>
     <div class="container mt-5">
@@ -69,27 +80,31 @@
                     En su historial clínico se evidencia que Juan Enfermin ha sido hospitalizado en varias ocasiones
                     debido a infecciones respiratorias recurrentes desde la infancia, especialmente neumonías.</p>
                 <h5 class="mt-4">Notas del Médico:</h5>
-                <p> <ul>
+                <p>
+                <ul>
                     <li>
-                        Juan Enfermin ha sido evaluado por un equipo multidisciplinario debido a la complejidad y falta de un
+                        Juan Enfermin ha sido evaluado por un equipo multidisciplinario debido a la complejidad y falta
+                        de un
                         diagnóstico claro.
                     </li>
                     <li>
                         Se han descartado diversas enfermedades infecciosas y autoinmunes mediante pruebas específicas y
-                    biopsias.
+                        biopsias.
                     </li>
                     <li>
-                        Se ha observado una disminución progresiva de la función pulmonar en los estudios de espirometría,
+                        Se ha observado una disminución progresiva de la función pulmonar en los estudios de
+                        espirometría,
                         lo cual ha llevado a considerar la posibilidad de una EPOC temprana.
                     </li>
                     <li>
                         Se ha solicitado una revisión adicional de los estudios realizados y se ha considerado la
-                        realización de pruebas más especializadas, como una biopsia pulmonar y una evaluación genética más
+                        realización de pruebas más especializadas, como una biopsia pulmonar y una evaluación genética
+                        más
                         detallada para descartar enfermedades raras o poco comunes.
                     </li>
                 </ul>
-                    <p>Diagnóstico Provisional:</p>
-                    El caso de Juan Enfermin presenta un desafío diagnóstico debido a la falta de una causa clara para
+                <p>Diagnóstico Provisional:</p>
+                <p> El caso de Juan Enfermin presenta un desafío diagnóstico debido a la falta de una causa clara para
                     sus síntomas y la complejidad de su historial médico. Actualmente, se sospecha de una posible EPOC
                     temprana, posiblemente relacionada con factores genéticos, aunque se requiere una evaluación
                     adicional y pruebas especializadas para confirmar o descartar este diagnóstico. Se continúa
